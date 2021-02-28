@@ -20,4 +20,5 @@ Documentation for the CatAPI can be found [here](https://docs.thecatapi.com/)
 Here are Screenshots from the app
 
 ![Cat Breeds](cat_breeds.png "Cat Breeds")
+
 ![Cat Breed Details](cat_breed_details.png "Cat Breed Details")
