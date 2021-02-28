@@ -1,5 +1,6 @@
 package io.budge.cats.ui.catbreeds
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import io.budge.cats.App
 import io.budge.cats.R
 import io.budge.cats.data.utils.LoadingStatus
 import io.budge.cats.databinding.FragmentCatBreedsBinding
+import io.budge.cats.ui.MainActivity
 import io.budge.cats.utils.EventObserver
 import io.budge.cats.utils.showSnackbar
 import javax.inject.Inject
@@ -25,6 +27,10 @@ class CatBreedsFragment : Fragment() {
 
     private lateinit var viewModel: CatBreedsViewModel
 
+    private val mainActivity: MainActivity
+        get() {
+            return activity as? MainActivity ?: throw IllegalStateException("Not attached!")
+        }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +43,7 @@ class CatBreedsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mainActivity.setStatusBarColor(Color.BLACK)
         (requireActivity().applicationContext as App).appComponent().inject(this)
         viewModel = ViewModelProvider(this, viewModelFactory).get(CatBreedsViewModel::class.java)
         binding.viewModel = viewModel

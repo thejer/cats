@@ -12,7 +12,7 @@ data class CatBreed(
     @SerializedName("id")
     val id: String,
     @SerializedName("image")
-    val image: Image,
+    val image: Image?,
     @SerializedName("name")
     val name: String,
     @SerializedName("origin")
@@ -20,5 +20,5 @@ data class CatBreed(
     @SerializedName("temperament")
     val temperament: String,
     @SerializedName("wikipedia_url")
-    val wikipediaUrl: String
+    val wikipediaUrl: String?
 ) : Parcelable

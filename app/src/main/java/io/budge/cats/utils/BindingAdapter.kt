@@ -21,7 +21,7 @@ fun bindImageView(imageView: ImageView, url: String?) {
 
 
 @BindingAdapter("catBreedsList")
-fun bindDogs(recyclerView: RecyclerView, data: MutableList<CatBreed>?) =
+fun bindCats(recyclerView: RecyclerView, data: MutableList<CatBreed>?) =
     if (data.isNullOrEmpty())
         recyclerView.hide()
     else {
