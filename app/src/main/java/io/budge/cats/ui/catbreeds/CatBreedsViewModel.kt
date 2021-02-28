@@ -44,7 +44,9 @@ class CatBreedsViewModel @Inject constructor(
             when (val result = catRepository.getBreeds()) {
                 is Result.Success -> {
                     _loadingStatus.value = LoadingStatus.Success
-                    _catBreeds.value = result.data
+                    _catBreeds.value = result.data.also { breeds ->
+                        breeds.removeIf { it.image == null || it.wikipediaUrl == null }
+                    }
                 }
                 is Result.Error -> {
                     _loadingStatus.value = LoadingStatus.Error(result.errorCode, result.errorMessage)

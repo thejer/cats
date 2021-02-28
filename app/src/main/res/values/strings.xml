@@ -9,4 +9,6 @@
     <string name="long_text">As we all know, Google introduced Navigation Components some time ago. And moreover there is already 2.1.0 version at the moment.</string>
     <string name="read_more">Read more</string>
     <string name="view_url">View URL</string>
+    <string name="breed_image">Breed Image</string>
+    <string name="cat_breeds">Cat Breeds</string>
 </resources>
