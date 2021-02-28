@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="catBreed"
+            type="io.budge.cats.data.model.CatBreed" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cat_breed_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:checkable="true"
+        android:background="@color/white"
+        android:clickable="true"
+        android:layout_marginTop="16dp"
+        android:focusable="true"
+        app:checkedIconTint="?colorSecondary"
+        app:rippleColor="?colorPrimary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="16dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cat_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{catBreed.image.url}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                tools:src="@drawable/ic_pet" />
+
+            <TextView
+                android:id="@+id/cat_breed_name"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:text="@{catBreed.name}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cat_image"
+                tools:text="Alpine Feline" />
+
+
+<!--            <com.google.android.material.chip.ChipGroup-->
+<!--                app:layout_constraintTop_toBottomOf="@id/cat_breed_name"-->
+<!--                android:id="@+id/chipGroup"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--            </com.google.android.material.chip.ChipGroup>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

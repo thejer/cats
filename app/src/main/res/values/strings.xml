@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Cats</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="origin">Origin:</string>
+    <string name="empty_breeds_text">There are no cat breeds.</string>
+    <string name="empty_breeds_icon">Empty breeds icon</string>
+    <string name="retry">RETRY</string>
+    <string name="long_text">As we all know, Google introduced Navigation Components some time ago. And moreover there is already 2.1.0 version at the moment.</string>
+    <string name="read_more">Read more</string>
+    <string name="view_url">View URL</string>
 </resources>
