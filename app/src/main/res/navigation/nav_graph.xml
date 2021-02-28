@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/catsBreedsFragment">
+
+    <fragment
+        android:id="@+id/catsBreedsFragment"
+        android:name="io.budge.cats.ui.catbreeds.CatBreedsFragment"
+        tools:layout="@layout/fragment_cat_breeds">
+
+        <action
+            android:id="@+id/action_catsBreedsFragment_to_catBreedDetailsFragment"
+            app:destination="@id/catBreedDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/catBreedDetailsFragment"
+        android:name="io.budge.cats.ui.breeddetails.BreedDetailsFragment"
+        tools:layout="@layout/fragment_breed_details">
+        <argument
+            android:name="catBreed"
+            app:argType="io.budge.cats.data.model.CatBreed" />
+    </fragment>
+
+</navigation>
