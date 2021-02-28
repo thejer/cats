@@ -6,8 +6,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="link_blue">#5D6B91</color>
 
-    <color name="transparent">#00FFFFFF</color>
-
     <color name="primaryColor">#9fa8da</color>
     <color name="primarySurfaceColor">#D9DFFA</color>
     <color name="primaryDarkColor">#6f79a8</color>
