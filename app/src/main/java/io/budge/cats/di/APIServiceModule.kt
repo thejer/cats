@@ -19,7 +19,7 @@ class APIServiceModule {
 
     @Provides
     @Singleton
-    fun provideDogsAPIService(
+    fun provideCatsAPIService(
         client: Lazy<OkHttpClient>,
         gson: Gson
     ): CatsApiService {
