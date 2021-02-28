@@ -31,7 +31,8 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/cat_image"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
                 android:scaleType="centerCrop"
                 app:imageUrl="@{catBreed.image.url}"
                 app:layout_constraintTop_toTopOf="parent"

@@ -1,9 +1,8 @@
 package io.budge.cats.data.utils
 
+import io.budge.cats.utils.Constants.GENERIC_ERROR_CODE
+import io.budge.cats.utils.Constants.GENERIC_ERROR_MESSAGE
 import retrofit2.Response
-
-const val GENERIC_ERROR_MESSAGE = "An error occurred, Please try again"
-const val GENERIC_ERROR_CODE = "-1"
 
 fun <T : Any> getAPIResult(response: Response<T>): Result<T> {
     if (response.isSuccessful) {

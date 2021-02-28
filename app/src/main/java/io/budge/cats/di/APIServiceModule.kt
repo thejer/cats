@@ -6,6 +6,8 @@ import dagger.Module
 import dagger.Provides
 import io.budge.cats.BuildConfig
 import io.budge.cats.data.api.CatsApiService
+import io.budge.cats.utils.Constants.AUTH_KEY
+import io.budge.cats.utils.Constants.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -63,10 +65,4 @@ class APIServiceModule {
     @Singleton
     fun provideGsonConverterFactory(gson: Gson): GsonConverterFactory =
         GsonConverterFactory.create(gson)
-
-
-    companion object {
-        const val AUTH_KEY = "cda64ccb-a99d-4a2d-b2df-3eafe6d436c1"
-        const val BASE_URL = "https://api.thecatapi.com/"
-    }
 }

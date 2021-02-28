@@ -10,14 +10,15 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".ui.breeddetails.BreedDetailsFragment">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/cat_detail_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             app:imageUrl="@{catBreed.image.url}"
             app:layout_constraintTop_toTopOf="parent"

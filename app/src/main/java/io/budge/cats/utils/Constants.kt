@@ -1,10 +1,8 @@
-package com.task.noteapp.utils
+package io.budge.cats.utils
 
 object Constants {
     const val GENERIC_ERROR_MESSAGE = "An error had occurred. Please try again"
     const val GENERIC_ERROR_CODE = "-1"
-    const val ERROR_ADDING_NOTE = "Error adding note, please try again."
-    const val ERROR_UPDATING_NOTE = "Error updating note, please try again."
-    const val ERROR_DELETING_NOTE = "Error deleting note, please try again."
-    const val NOTE_NOT_FOUND = "Note not found."
+    const val AUTH_KEY = "cda64ccb-a99d-4a2d-b2df-3eafe6d436c1"
+    const val BASE_URL = "https://api.thecatapi.com/"
 }
