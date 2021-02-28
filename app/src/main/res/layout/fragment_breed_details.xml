@@ -32,6 +32,7 @@
                 app:expandedTitleMarginStart="@dimen/expanded_title_margin_start"
                 app:expandedTitleMarginEnd="@dimen/expanded_title_margin_end"
                 app:title="@{catBreed.name}"
+                app:contentScrim="?colorPrimary"
                 tools:title="Alpine Feline"
                 >
 

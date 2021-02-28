@@ -1,7 +1,7 @@
 package io.budge.cats.ui
 
 import android.os.Bundle
-import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
 import io.budge.cats.R
 
@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun setStatusBarColor(@ColorInt color: Int){
+    fun setStatusBarColor(@ColorRes color: Int){
         window.statusBarColor = color
     }
 }

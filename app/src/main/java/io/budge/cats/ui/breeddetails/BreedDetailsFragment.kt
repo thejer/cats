@@ -1,12 +1,12 @@
 package io.budge.cats.ui.breeddetails
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import io.budge.cats.R
 import io.budge.cats.databinding.FragmentBreedDetailsBinding
 import io.budge.cats.ui.MainActivity
 import io.budge.cats.utils.hide
@@ -33,13 +33,17 @@ class BreedDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mainActivity.setStatusBarColor(Color.TRANSPARENT)
+        mainActivity.setStatusBarColor(R.color.transparent)
+
         val args: BreedDetailsFragmentArgs by navArgs()
         val catBreed = args.catBreed
+
         binding.catBreed = catBreed
         binding.readMore.underline()
+
         if (catBreed.wikipediaUrl.isNullOrBlank()) binding.readMore.hide()
         else binding.readMore.show()
+
         binding.readMore.setOnClickListener {
             if (!catBreed.wikipediaUrl.isNullOrBlank())
                 requireActivity().viewUrl(catBreed.wikipediaUrl)
