@@ -47,7 +47,7 @@ class CatBreedsViewModelTest {
     @Test
     fun `getCatBreeds on success catBreeds value is set`() {
         runBlocking {
-            val tesCatBreeds = mutableListOf(
+            val testCatBreeds = mutableListOf(
                 CatBreed(
                     "Cat breed description",
                     "id1",
@@ -58,10 +58,10 @@ class CatBreedsViewModelTest {
                     "wikipedia url"
                 )
             )
-            Mockito.`when`(repository.getBreeds()).thenReturn(Result.Success(tesCatBreeds))
+            Mockito.`when`(repository.getBreeds()).thenReturn(Result.Success(testCatBreeds))
             viewModel.getCatBreeds()
             Assert.assertEquals(LiveDataTestUtil.getValue(viewModel.loadingStatus), LoadingStatus.Loading)
-            Assert.assertEquals(LiveDataTestUtil.getValue(viewModel.catBreeds), tesCatBreeds)
+            Assert.assertEquals(LiveDataTestUtil.getValue(viewModel.catBreeds), testCatBreeds)
             Assert.assertEquals(LiveDataTestUtil.getValue(viewModel.loadingStatus), LoadingStatus.Success)
         }
     }
@@ -86,7 +86,7 @@ class CatBreedsViewModelTest {
 
     @Test
     fun `openCatBreedDetails on success navigateToDetails is set`(){
-        val catBreed = CatBreed(
+        val testCatBreed = CatBreed(
             "Cat breed description",
             "id1",
             Image("Image url"),
@@ -95,8 +95,8 @@ class CatBreedsViewModelTest {
             "temperament1, temperament2",
             "wikipedia url"
         )
-        viewModel.openCatBreedDetails(catBreed)
-        Assert.assertEquals(LiveDataTestUtil.getValue(viewModel.navigateToDetails).peekContent(), Event(catBreed).peekContent())
+        viewModel.openCatBreedDetails(testCatBreed)
+        Assert.assertEquals(LiveDataTestUtil.getValue(viewModel.navigateToDetails).peekContent(), Event(testCatBreed).peekContent())
     }
 
 }
